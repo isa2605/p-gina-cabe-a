@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meu site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- CABEÇALHO (Topo da página) -->
+  <header id="secao-cabecalho" class="github-header">
+    <div class="header-esquerda">
+      <svg class="github-icon" height="28" viewBox="0 0 16 16" width="28" aria-hidden="true">
+        <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+      </svg>
+      <span class="repo-nome">usuario / <strong>meu-site</strong></span>
+      <span class="badge-publico">Público</span>
+    </div>
+
+    <div class="header-centro">
+      <input type="text" id="campo-busca" placeholder="Pesquisar seção (ex: cabeçalho, rodapé, css)...">
+    </div>
+
+    <nav class="header-nav">
+      <a href="#secao-cabecalho">Cabeçalho</a>
+      <a href="#secao-titulo">Título</a>
+      <a href="#secao-arquivos">Arquivos</a>
+      <a href="#secao-rodape">Rodapé</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container">
+
+    <!-- TÍTULO CENTRALIZADO -->
+    <section id="secao-titulo" class="hero-titulo">
+      <h1 class="titulo-central">meu site</h1>
+      <p class="subtitulo-central">
+        Esta é a área central de destaque no topo do conteúdo principal (<code>&lt;main&gt;</code>).
+      </p>
+    </section>
+
+    <!-- BOTÕES INTERATIVOS (Controlados pelo script.js) -->
+    <div class="barra-controles">
+      <span>Localizar na página:</span>
+      <button type="button" class="btn-github" data-alvo="secao-cabecalho">Ver Cabeçalho</button>
+      <button type="button" class="btn-github" data-alvo="secao-titulo">Ver Título Central</button>
+      <button type="button" class="btn-github" data-alvo="secao-arquivos">Ver Lista de Arquivos</button>
+      <button type="button" class="btn-github" data-alvo="secao-rodape">Ver Rodapé</button>
+      <button type="button" class="btn-limpar" id="btn-limpar">Limpar Destaque</button>
+    </div>
+
+    <!-- LISTA DE ARQUIVOS ESTILO REPOSITÓRIO GITHUB -->
+    <section id="secao-arquivos" class="card-github card-filtravel" data-busca="arquivos index.html style.css script.js estrutura">
+      <div class="card-topo">
+        <span><strong>usuario</strong> — Estrutura dividida em 3 arquivos</span>
+        <span class="texto-suave">Atualizado agora</span>
+      </div>
+      <ul class="lista-arquivos">
+        <li>
+          <span class="arquivo-nome">📄 index.html</span>
+          <span class="arquivo-desc">Define a estrutura semântica: cabeçalho, título central, seções e rodapé.</span>
+        </li>
+        <li>
+          <span class="arquivo-nome">🎨 style.css</span>
+          <span class="arquivo-desc">Aplica o fundo azul bebê, a fonte Arial e o visual estilo GitHub.</span>
+        </li>
+        <li>
+          <span class="arquivo-nome">⚙️ script.js</span>
+          <span class="arquivo-desc">Controla a barra de pesquisa e o destaque visual de cada parte da página.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- README EXPLICANDO ONDE FICA CADA COISA -->
+    <section class="card-github">
+      <div class="card-topo">
+        <span>📖 <strong>README.md</strong> — Mapa de organização da página</span>
+      </div>
+      <div class="readme-corpo">
+        <article class="bloco-explicacao card-filtravel" data-busca="cabecalho header topo menu pesquisa">
+          <h2>1. Onde fica o Cabeçalho (<code>&lt;header&gt;</code>)</h2>
+          <p>
+            Fica na <strong>extremidade superior</strong> da tela (barra escura no topo). Ele reúne o logotipo, o nome do repositório, a barra de pesquisa em tempo real e os links de navegação rápida.
+          </p>
+        </article>
+
+        <article class="bloco-explicacao card-filtravel" data-busca="titulo central meu site h1 main">
+          <h2>2. Onde fica o Título Central (<code>&lt;h1&gt;</code>)</h2>
+          <p>
+            Fica <strong>centralizado no topo da área principal</strong> (<code>&lt;main&gt;</code>), logo abaixo do cabeçalho, exibindo o nome <strong>"meu site"</strong> como ponto focal da página.
+          </p>
+        </article>
+
+        <article class="bloco-explicacao card-filtravel" data-busca="corpo conteudo repositorio cards">
+          <h2>3. Onde fica o Conteúdo Principal (<code>&lt;main&gt;</code>)</h2>
+          <p>
+            Fica no <strong>centro da página</strong>, organizado em cartões brancos com bordas suaves no padrão visual do GitHub, separando a lista de arquivos da documentação.
+          </p>
+        </article>
+
+        <article class="bloco-explicacao card-filtravel" data-busca="rodape footer base inferior final">
+          <h2>4. Onde fica o Rodapé (<code>&lt;footer&gt;</code>)</h2>
+          <p>
+            Fica na <strong>parte inferior (base)</strong> da página, encerrando o conteúdo com informações do projeto, créditos e atalho para voltar ao topo.
+          </p>
+        </article>
+
+        <p id="mensagem-vazia" class="mensagem-vazia oculto">
+          Nenhuma seção encontrada para essa busca.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ (Base da página) -->
+  <footer id="secao-rodape" class="github-footer">
+    <div class="footer-conteudo">
+      <p>
+        <strong>Este é o Rodapé (<code>&lt;footer&gt;</code>):</strong> localizado sempre no final da página para exibir informações de encerramento, créditos e links úteis.
+      </p>
+      <div class="footer-links">
+        <span>© 2026 meu site</span>
+        <a href="#secao-cabecalho">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
